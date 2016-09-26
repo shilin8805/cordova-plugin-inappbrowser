@@ -516,16 +516,16 @@ public class InAppBrowser extends CordovaPlugin {
             }
             if (features.get(SHOULD_PAUSE) != null) {
                 shouldPauseInAppBrowser = ((Boolean) features.get(SHOULD_PAUSE)).booleanValue();
-                if (features.get(NAV_BAR_COLOR) != null) {
-                    navbarColor = (String) features.get(NAV_BAR_COLOR);
-                } else {
-                    navbarColor = "#000000";
-                }
-                if (features.get(NAV_TITLE) != null) {
-                    navTitle = (String) features.get(NAV_TITLE);
-                } else {
-                    navTitle = "";
-                }
+            }
+            if (features.get(NAV_BAR_COLOR) != null) {
+                navbarColor = (String) features.get(NAV_BAR_COLOR);
+            } else {
+                navbarColor = "#000000";
+            }
+            if (features.get(NAV_TITLE) != null) {
+                navTitle = (String) features.get(NAV_TITLE);
+            } else {
+                navTitle = "";
             }
 
             final CordovaWebView thatWebView = this.webView;
