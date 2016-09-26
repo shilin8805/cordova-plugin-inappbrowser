@@ -128,7 +128,7 @@
 
 	<header-file src="src/ios/CDVInAppBrowser.h" />
 	<source-file src="src/ios/CDVInAppBrowser.m" />
-	<resource-file src="src/ios/Resources/in_app_browser_back_btn.png"/>	    
+	<resource-file src="src/ios/Resource/in_app_browser_back_btn.png"/>	    
 	<framework src="CoreGraphics.framework" />
 	    
     </platform>
