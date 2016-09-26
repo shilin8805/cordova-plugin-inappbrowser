@@ -50,6 +50,7 @@
         <source-file src="src/android/InAppChromeClient.java" target-dir="src/org/apache/cordova/inappbrowser" />
 
         <!--  drawable src/android/resources -->
+	<resource-file src="src/android/res/drawable-hdpi/in_app_browser_back_btn.png" target="res/drawable/in_app_browser_back_btn.png"/>
         <resource-file src="src/android/res/drawable-hdpi/ic_action_next_item.png" target="res/drawable-hdpi/ic_action_next_item.png" />
         <resource-file src="src/android/res/drawable-mdpi/ic_action_next_item.png" target="res/drawable-mdpi/ic_action_next_item.png" />
         <resource-file src="src/android/res/drawable-xhdpi/ic_action_next_item.png" target="res/drawable-xhdpi/ic_action_next_item.png" />
@@ -125,10 +126,11 @@
             </feature>
         </config-file>
 
-        <header-file src="src/ios/CDVInAppBrowser.h" />
-	    <source-file src="src/ios/CDVInAppBrowser.m" />
+	<header-file src="src/ios/CDVInAppBrowser.h" />
+	<source-file src="src/ios/CDVInAppBrowser.m" />
+	<resource-file src="src/ios/Resources/in_app_browser_back_btn.png"/>	    
+	<framework src="CoreGraphics.framework" />
 	    
-	    <framework src="CoreGraphics.framework" />
     </platform>
 
     <!-- wp7 -->
