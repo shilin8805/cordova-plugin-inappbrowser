@@ -51,6 +51,8 @@
 @property (nonatomic, copy) NSString* toolbarposition;
 @property (nonatomic, assign) BOOL clearcache;
 @property (nonatomic, assign) BOOL clearsessioncache;
+@property (nonatomic, copy) NSString *navbarcolor;
+@property (nonatomic, copy) NSString *title;
 
 @property (nonatomic, copy) NSString* presentationstyle;
 @property (nonatomic, copy) NSString* transitionstyle;
@@ -82,13 +84,13 @@
     
 }
 
-@property (nonatomic, strong) IBOutlet UIWebView* webView;
-@property (nonatomic, strong) IBOutlet UIBarButtonItem* closeButton;
-@property (nonatomic, strong) IBOutlet UILabel* addressLabel;
-@property (nonatomic, strong) IBOutlet UIBarButtonItem* backButton;
-@property (nonatomic, strong) IBOutlet UIBarButtonItem* forwardButton;
-@property (nonatomic, strong) IBOutlet UIActivityIndicatorView* spinner;
-@property (nonatomic, strong) IBOutlet UIToolbar* toolbar;
+@property (nonatomic, strong) IBOutlet UIWebView *webView;
+@property (nonatomic, strong) IBOutlet UIButton *closeButton;
+@property (nonatomic, strong) IBOutlet UILabel *addressLabel;
+@property (nonatomic, strong) IBOutlet UIButton *backButton;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *spinner;
+@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) IBOutlet UIView *toolbar;
 
 @property (nonatomic, weak) id <CDVScreenOrientationDelegate> orientationDelegate;
 @property (nonatomic, weak) CDVInAppBrowser* navigationDelegate;
@@ -98,7 +100,6 @@
 - (void)navigateTo:(NSURL*)url;
 - (void)showLocationBar:(BOOL)show;
 - (void)showToolBar:(BOOL)show : (NSString *) toolbarPosition;
-- (void)setCloseButtonTitle:(NSString*)title;
 
 - (id)initWithUserAgent:(NSString*)userAgent prevUserAgent:(NSString*)prevUserAgent browserOptions: (CDVInAppBrowserOptions*) browserOptions;
 
